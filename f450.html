@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>F450 drone</title>
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-content">
+            <a href="index.html" class="back-button">&larr; Back</a>
+            <h1>F450 drone</h1>
+            <div class="year">2019</div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+
+
+
+        <div class="project-content">
+
+            <div class="text left">
+                <h2>Overview</h2>
+                <p>
+                    This is a drone built around an F450 frame. I used it for my high school final project, where I
+                    worked
+                    on designing, building and programming a flight controller. The frame, ESCs and motors are off the
+                    shelf,
+                    and I placed focus on designing the flight controller myself. The controller is based on an STM32
+                    microcontroller,
+                    which I placed
+                    on a prototyping PCB together with an IMU (accelerometer and gyroscope) and a barometer.
+                </p>
+            </div>
+            <div class="image right">
+                <img src="images/f450/main.jpg">
+            </div>
+        </div>
+
+
+
+        <div class="project-content">
+
+            <div class="text right">
+
+                <h2>PCBs</h2>
+                <p>
+                    All the sensors and the transceiver are breakout PCBs,
+                    and they took up quite a lot of space. As I wanted to fit the flight controller in a square box on
+                    top of the
+                    drone, I wanted to limit its size. This is why I decided to stack two PCBs on top of eachother. The
+                    top one has the
+                    STM32 with sensors to do all the controller calculations, and the PCB below it handles all the
+                    communication with the ground station.
+
+                </p>
+            </div>
+            <div class="image left">
+                <img src="images/f450/stack.png">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="project-content">
+
+            <div class="text left">
+
+                <h2>Communication</h2>
+                <p>
+                    I could have used an off the shelf radio receiver, but that would be quite boring. So I decided to
+                    use an NRF24L01 2.4GHz transceiver board,
+                    such that I have full control over the data being sent in both directions. It allows me to send
+                    custom
+                    commands, as well as setup custom telemetry channels for debugging, which is not possible with most
+                    existing 2.4GHz RC receivers.
+                </p>
+            </div>
+            <div class="image right">
+                <img src="images/f450/dr.jpg">
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <div class="text right">
+
+                <p>
+                    I used this very primitive 'ground control station', which allows me to read out telemetry from the
+                    flight controller in real time.
+                    It has a standard radio receiver that connecs to my remote control, and it forwards the messages to
+                    the drone. Of course this is a very
+                    inefficient way of controlling the drone with the remote, but it gave me full control over the
+                    communication channels which allowed me
+                    to learn a lot more than doing it the 'boring' efficient way.
+                </p>
+            </div>
+            <div class="image left">
+                <img src="images/f450/gcs.jpg">
+            </div>
+        </div>
+
+
+        <div class="project-content">
+
+            <div class="text left">
+                <h2>Flying</h2>
+                <p>
+                    I wrote the software to read out all the sensors, handle the communication and run a PID controller.
+                    After fine tuning the software for some time, and tuning the controller, it actually worked! Even though it flies a little bit (very)
+                    wonky, it does stay in the air and its possible to control it using the remote.
+
+                </p>
+            </div>
+            <div class="image right">
+                <img src="images/f450/fly.gif">
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 1.7em; 
+}
+
+.item p{
+    line-height: 2em; 
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 13pt;
+    background-color: #f4f4f4;
+    padding: 0 20px 20px 20px;
+    color: rgb(68, 68, 68);
+}
+
+/* Banner Section for both Index and Project */
+.banner {
+    background-color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 0;
+    position: static;
+    top: 0;
+    left: 0;
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+}
+
+.back-button {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+    font-weight: 300;
+}
+
+.banner h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+#name {
+    font-size: 2.5rem;
+}
+
+/* Year Indication on Project Page */
+.banner .year {
+    font-size: 1rem;
+    color: rgb(68, 68, 68);
+    opacity: 0.6;
+    margin-top: 5px;
+}
+
+/* Portfolio Grid Container (Index Page) */
+.portfolio-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 20px;
+
+
+}
+
+/* Portfolio Grid (Index Page) */
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-items: start;
+}
+
+.item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px); /* Prevents it from growing too large */
+    min-width: 350px;
+    text-align: center;
+    transition: all 0.15s ease-in-out;
+}
+
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.item img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+
+    object-fit: cover;
+    height: 250px;
+    /* Ensures images are cropped to the same height */
+}
+
+.item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: rgb(68, 68, 68);
+}
+
+.item p {
+    text-align: start;
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+.item a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Project Container */
+.project-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Project Content */
+.project-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.project-content h2{
+    margin-bottom: 7px;
+}
+
+/* Text and Image Flex */
+.project-content .text {
+    flex: 1 1 50%;
+    font-weight: 300;
+
+}
+
+.project-content .text.left {
+    order: 1
+}
+
+.project-content .text.right {
+    order: 2
+}
+
+.project-content .image {
+    flex: 1 1 45%;
+}
+
+.project-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    object-fit: contain;
+    order: 2;
+}
+
+.project-content .left {
+    order: 1
+}
+
+.project-content .right {
+    order: 2
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+    }
+
+    .project-content .image {
+        flex: 1 1 100%;
+    }
+
+    .project-content img {
+        max-width: 100%;
+    }
+
+    .project-content .left {
+        order: 3;
+    }
+
+    .project-content .right {
+        order: 3;
+    }
+
+    .portfolio-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 13pt;
+        background-color: #f4f4f4;
+        padding: 0;
+        color: rgb(68, 68, 68);
+    }
+
+
+}
