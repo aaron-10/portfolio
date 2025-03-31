@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Camera jib</title>
+</head>
+
+<body>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-content">
+            <a href="index.html" class="back-button">&larr; Back</a>
+            <h1>Camera jib</h1>
+            <div class="year">2020</div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="project-container">
+
+
+
+        <div class="project-content">
+
+            <div class="text left">
+                <h2></h2>
+                <p>
+                    In high school I regularly helped out recording and streaming live stage events such as dance or
+                    musical performances. I thought that there must be a
+                    better way to record than holding the camera in your hand or having a boring stationary stream from
+                    a tripod. I went looking around the school together with the rest of the camera crew and found an
+                    old 4 meter long steel pipe, as well as a
+                    massive tripod. We decided to turn this into a camera jib for getting much more interesting shots on
+                    stage.
+
+                </p>
+            </div>
+            <div class="image right">
+                <img src="images/jib/jib5.jpg">
+            </div>
+        </div>
+
+
+        <div class="project-content">
+
+            <div class="text right">
+
+                <p>
+                    The tilt of the camera is passively maintained by a long thin tube that runs parallel to the main
+                    arm. When the jib moves up or down, the parralellogram always keeps the camera upright. The yaw is
+                    actively controlled by a motor. The arm is balanced using some dumbbell weights hanging
+                    on the back.
+                </p>
+            </div>
+            <div class="image left">
+                <img src="images/jib/jib1.jpg">
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <div class="text left">
+
+                <p>
+                    The camera is attached to the jib via old internals of a moving head lamp. It contains a disc that
+                    be rotated using a stepper motor via a belt, perfect for yawing a camera. The stepper motor is
+                    connected to an
+                    Arduino via a stepper driver. An IMU (gyroscope + accelerometer) constantly measures the rotation of
+                    the jib and compensates
+                    the yaw via various profiles. It is also possible to manually control the yaw using a joystick on
+                    the handje of the jib.
+                    The Arduino can connect to a smartphone via Bluetooth. This way it is possible to change the way the
+                    yaw is compensated. By rotating the camera by a larger angle than the jib rotates, it is possible to
+                    orbit a specific location on stage.
+                    By rotating the camera by the same angle as the jib, the camera always points forward and it is
+                    possible to move in a semi-straight line. It is even possible to do a very primitive dolly zoom this
+                    way.
+                </p>
+            </div>
+            <div class="image right">
+                <img src="images/jib/jib2.jpg">
+            </div>
+        </div>
+
+        <div class="project-content">
+
+            <div class="text right">
+
+                <p>
+                    There is a screen at the user end of the jib that shows the live camera feed.
+                </p>
+            </div>
+            <div class="image left">
+                <img src="images/jib/jib.gif">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
